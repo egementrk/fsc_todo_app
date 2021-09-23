@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.fsc_todo_app">
+    package="com.example.supabase_flutter">
    <application
-        android:label="fsc_todo_app"
+        android:label="supabase_flutter"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

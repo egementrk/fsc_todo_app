@@ -1,4 +1,4 @@
-package com.example.fsc_todo_app
+package com.example.supabase_flutter
 
 import io.flutter.embedding.android.FlutterActivity
 
