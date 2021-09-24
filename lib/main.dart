@@ -1,23 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:fsc_todo_app/home_page.dart';
-import 'package:supabase/supabase.dart';
+import 'package:supabase_flutter/Pages/home_page.dart';
+import 'package:supabase_flutter/Pages/onboarding/onboarding_main.dart';
+import 'package:supabase_flutter/Pages/splash_page.dart';
 
-const supabaseUrl = 'https://duixoceusxyjdqwsyrqy.supabase.co';
-const supabaseKey =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzMjIzNjI4NCwiZXhwIjoxOTQ3ODEyMjg0fQ.LxOmrV17XN4LB3YE1GqABaQioIpr_82-CsWnrAohrMM';
-final supabaseClient = SupabaseClient(supabaseUrl, supabaseKey);
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({Key key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      theme: ThemeData(
+        primaryColor: Colors.black,
+        secondaryHeaderColor: Colors.black,
+        primaryColorLight: Colors.black38,
+      ),
+      debugShowCheckedModeBanner: false,
+      initialRoute: "/",
+      routes: {
+        "/": (context) => SplashPage(),
+        "/onboard": (context) => OnboardingMain(),
+        "/home": (context) => HomePage(),
+      },
+      // home: HomePage(),
     );
   }
 }
